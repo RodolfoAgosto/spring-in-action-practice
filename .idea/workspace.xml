@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9dcefcf-b06f-4071-9802-c9b5d756d96f" name="Changes" comment="agrego chapter01 y chapter02">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter01/pom.xml" afterDir="false" />
+    <list default="true" id="d9dcefcf-b06f-4071-9802-c9b5d756d96f" name="Changes" comment="Terminado capítulo 1 - estructura y dependencias.">
       <change afterPath="$PROJECT_DIR$/chapter01/src/main/java/com/agosto/chapter01/TacoCloudApplication.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/chapter01/src/main/java/com/agosto/chapter01/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter01/src/main/resources/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter01/src/main/resources/static/images/TacoCloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter01/src/main/resources/templates/home.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/chapter01/src/test/java/com/agosto/chapter01/TacoCloudApplicationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter01/src/main/java/com/agosto/App.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter01/src/test/java/com/agosto/AppTest.java" beforeDir="false" />
     </list>
@@ -124,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1748033357019</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Terminado capítulo 1 - estructura y dependencias.">
+      <created>1748041348620</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748041348620</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +140,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="agrego chapter01 y chapter02" />
-    <option name="LAST_COMMIT_MESSAGE" value="agrego chapter01 y chapter02" />
+    <MESSAGE value="Terminado capítulo 1 - estructura y dependencias." />
+    <option name="LAST_COMMIT_MESSAGE" value="Terminado capítulo 1 - estructura y dependencias." />
   </component>
 </project>
