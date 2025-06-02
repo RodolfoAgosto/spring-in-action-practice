@@ -5,40 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9dcefcf-b06f-4071-9802-c9b5d756d96f" name="Changes" comment="Se agregaron todas las clases faltantes. El proyecto esta funcionalmente finalizado.">
-      <change afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/TacoCloudApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/IdToIngredientConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/TacoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/entity/Ingredient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/entity/Taco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/entity/TacoOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/repository/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/src/main/resources/static/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/src/main/resources/static/images/TacoCloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/src/main/resources/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/src/main/resources/templates/newTaco.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/src/main/resources/templates/tacoOrder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/classes/com/agosto/chapter02/TacoCloudApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/classes/com/agosto/chapter02/WebConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/classes/com/agosto/chapter02/controller/IdToIngredientConverter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/classes/com/agosto/chapter02/controller/OrderController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/classes/com/agosto/chapter02/controller/TacoController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/classes/com/agosto/chapter02/entity/Ingredient$Type.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/classes/com/agosto/chapter02/entity/Ingredient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/classes/com/agosto/chapter02/entity/Taco.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/classes/com/agosto/chapter02/entity/TacoOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/classes/static/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/classes/static/images/TacoCloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/classes/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/classes/templates/newTaco.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/classes/templates/tacoOrder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter01/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter01/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter02/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter02/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/IdToIngredientConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/IdToIngredientConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/TacoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/TacoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/entity/Taco.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/entity/Taco.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1748139211427</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Se agregaron todas las clases faltantes. El proyecto esta funcionalmente finalizado.">
+      <created>1748891473034</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1748891473034</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
