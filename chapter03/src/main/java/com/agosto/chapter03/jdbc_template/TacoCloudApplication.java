@@ -1,4 +1,4 @@
-package com.agosto.chapter02;
+package com.agosto.chapter03.jdbc_template;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TacoCloudApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(TacoCloudApplication.class, args);
+
     }
 
 }

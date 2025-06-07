@@ -4,12 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9dcefcf-b06f-4071-9802-c9b5d756d96f" name="Changes" comment="Se agregaron todas las clases faltantes. El proyecto esta funcionalmente finalizado.">
+    <list default="true" id="d9dcefcf-b06f-4071-9802-c9b5d756d96f" name="Changes" comment="Se finalizó el capítulo 3.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/TacoCloudApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/controller/IdToIngredientConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/controller/TacoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/entity/Ingredient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/entity/IngredientRef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/entity/Taco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/entity/TacoOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/repository/IngredientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/repository/JdbcIngredientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/repository/JdbcTacoOrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/repository/TacoOrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/resources/static/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/resources/static/images/TacoCloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/resources/templates/newTaco.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/resources/templates/tacoOrder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/IdToIngredientConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/IdToIngredientConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/TacoCloudApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/TacoCloudApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/TacoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/controller/TacoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/entity/Taco.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter02/src/main/java/com/agosto/chapter02/entity/Taco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +43,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -55,8 +79,9 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "21",
-    "last_opened_file_path": "C:/Users/User/OneDrive/Desktop/BU 2025/Java/Spring in action/spring-in-action-practice/chapter02/src/main/resources/static/images",
+    "last_opened_file_path": "C:/Users/User/OneDrive/Desktop/BU 2025/Java/Spring in action/spring-in-action-practice/chapter03/src/main/resources/templates",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -65,14 +90,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\OneDrive\Desktop\BU 2025\Java\Spring in action\spring-in-action-practice\chapter03\src\main\resources\templates" />
+      <recent name="C:\Users\User\OneDrive\Desktop\BU 2025\Java\Spring in action\spring-in-action-practice\chapter03\src\main\resources\static\css" />
+      <recent name="C:\Users\User\OneDrive\Desktop\BU 2025\Java\Spring in action\spring-in-action-practice\chapter03\src\main\resources\static\images" />
       <recent name="C:\Users\User\OneDrive\Desktop\BU 2025\Java\Spring in action\spring-in-action-practice\chapter02\src\main\resources\static\images" />
       <recent name="C:\Users\User\OneDrive\Desktop\BU 2025\Java\Spring in action\spring-in-action-practice\chapter02" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\OneDrive\Desktop\BU 2025\Java\Spring in action\spring-in-action-practice\chapter03\src\main\resources\static\" />
       <recent name="C:\Users\User\OneDrive\Desktop\BU 2025\Java\Spring in action\spring-in-action-practice\chapter02\src\main\resources\static" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TacoCloudApplication">
+  <component name="RunManager" selected="Application.com.agosto.chapter03.jdbc_template.TacoCloudApplication">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.agosto.App" />
       <module name="chapter01" />
@@ -112,8 +141,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.agosto.chapter03.jdbc_template.TacoCloudApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.agosto.chapter03.jdbc_template.TacoCloudApplication" />
+      <module name="chapter03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.agosto.chapter03.jdbc_template.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.agosto.chapter03.jdbc_template.TacoCloudApplication" />
         <item itemvalue="Application.TacoCloudApplication" />
         <item itemvalue="Application.com.agosto.chapter02.TacoCloudApplication" />
         <item itemvalue="Application.App" />
@@ -171,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1748891473034</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Se modificó la carga de datos del map del Convertidor de ingredientes para que solo se cargue en el constructor.&#10;Se arreglaron detalles mínimos.">
+      <created>1748903708559</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1748903708560</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +240,8 @@
     <MESSAGE value="Terminado capítulo 1 - estructura y dependencias." />
     <MESSAGE value="Agrego dos archivos .gitkeep para replicar las carpetas vacias y visualizar la estructura del proyecto." />
     <MESSAGE value="Se agregaron todas las clases faltantes. El proyecto esta funcionalmente finalizado." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agregaron todas las clases faltantes. El proyecto esta funcionalmente finalizado." />
+    <MESSAGE value="Se modificó la carga de datos del map del Convertidor de ingredientes para que solo se cargue en el constructor.&#10;Se arreglaron detalles mínimos." />
+    <MESSAGE value="Se finalizó el capítulo 3." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se finalizó el capítulo 3." />
   </component>
 </project>

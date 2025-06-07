@@ -31,6 +31,7 @@ public class OrderController {
         log.info("Orden guardada: {}", tacoOrder);
         sessionStatus.setComplete();
         return "redirect:/";
+
     }
 
 }
