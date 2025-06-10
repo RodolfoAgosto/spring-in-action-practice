@@ -1,4 +1,4 @@
-package com.agosto.chapter03.jdbc_template;
+package com.agosto.chapter03;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

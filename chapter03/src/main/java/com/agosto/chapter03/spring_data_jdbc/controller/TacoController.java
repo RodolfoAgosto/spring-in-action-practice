@@ -1,12 +1,13 @@
-package com.agosto.chapter03.jdbc_template.controller;
+package com.agosto.chapter03.spring_data_jdbc.controller;
 
-import com.agosto.chapter03.jdbc_template.entity.Ingredient;
-import com.agosto.chapter03.jdbc_template.entity.Taco;
-import com.agosto.chapter03.jdbc_template.entity.TacoOrder;
-import com.agosto.chapter03.jdbc_template.repository.IngredientRepository;
+import com.agosto.chapter03.spring_data_jdbc.entity.Ingredient;
+import com.agosto.chapter03.spring_data_jdbc.entity.Taco;
+import com.agosto.chapter03.spring_data_jdbc.entity.TacoOrder;
+import com.agosto.chapter03.spring_data_jdbc.repository.IngredientRepository;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,9 +17,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Controller
-@RequestMapping("/jdbcTacoController/newTaco")
-@SessionAttributes("tacoOrderJdbcTemplate")
+@Controller("TacoControllerSpringDataJdbc")
+@RequestMapping("/springDataJdbcTacoController/newTaco")
+@SessionAttributes("tacoOrder")
 @Slf4j
 public class TacoController {
 
@@ -43,12 +44,12 @@ public class TacoController {
                 .collect(Collectors.toList());
     }
 
-    @ModelAttribute("tacoOrderJdbcTemplate")
+    @ModelAttribute("tacoOrder")
     public TacoOrder tacoOrder(){
         return new TacoOrder();
     }
 
-    @ModelAttribute("tacoJdbcTemplate")
+    @ModelAttribute("taco")
     public Taco taco(){
         return new Taco();
     }
@@ -56,16 +57,16 @@ public class TacoController {
     @GetMapping
     public String newTaco(){
         log.info("New Taco OK!");
-        return "new-taco-jdbctemplate";
+        return "new-taco-springdatajdbc";
     }
 
     @PostMapping
-    public String addTaco(@Valid @ModelAttribute("tacoJdbcTemplate") Taco taco, Errors errors, @ModelAttribute("tacoOrderJdbcTemplate") TacoOrder tacoOrder ){
+    public String addTaco(@Valid Taco taco, Errors errors, @ModelAttribute TacoOrder tacoOrder ){
         if(errors.hasErrors())
-            return "new-taco-jdbctemplate";
+            return "new-taco-springdatajdbc";
         tacoOrder.addTaco(taco);
         log.info("Procesando taco " + taco);
-        return "redirect:/jdbcTacoController/tacoOrders/current";
+        return "redirect:/springDataJdbcTacoController/tacoOrders/current";
     }
 
 }

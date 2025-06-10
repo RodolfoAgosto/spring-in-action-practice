@@ -3,12 +3,14 @@
 <head>
     <title>Taco Cloud</title>
 </head>
-
 <body>
 <h1>Hola desde Taco Cloud!</h1>
 <img th:src="@{/images/TacoCloud.png}"/>
 <h1>
-<a th:href="@{/jdbcTacoController/newTaco}" id="design">Hace tu pedido desde acá.</a>
+    <a th:href="@{/jdbcTacoController/newTaco}" id="designJdbc">Hace tu pedido en JDBC desde acá.</a>
+</h1>
+<h1>
+    <a th:href="@{/springDataJdbcTacoController/newTaco}" id="designSpringDataJdbc">Hace tu pedido en Spring Data JDBC desde acá.</a>
 </h1>
 </body>
 </html>

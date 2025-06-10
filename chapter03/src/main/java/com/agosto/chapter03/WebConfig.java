@@ -1,4 +1,4 @@
-package com.agosto.chapter03.jdbc_template;
+package com.agosto.chapter03;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
