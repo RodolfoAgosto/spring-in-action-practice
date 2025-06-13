@@ -8,7 +8,7 @@
 <body>
    <h1>Armalo como quieras!</h1>
    <img th:src="@{/images/TacoCloud.png}"/>
-   <form method="POST" th:object="${taco}" >
+   <form method="POST" th:object="${tacoJdbcTemplate}" >
    <span th:if="${#fields.hasErrors('ingredients')}"  th:errors="*{ingredients}" class="validationErrors">Ingredient Error</span>
    <div>
        <h2>Diseñá tu wrap</h2>

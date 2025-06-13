@@ -8,7 +8,7 @@
 <h1>Confirma tu orden!</h1>
 <img th:src="@{/images/TacoCloud.png}"/>
 <a th:href="@{/jdbcTacoController/newTaco}">Diseñar otro taco</a>
-<form method="POST" th:action="@{/jdbcTacoController/tacoOrders}" th:object="${tacoOrder}">
+<form method="POST" th:action="@{/jdbcTacoController/tacoOrders}" th:object="${tacoOrderJdbcTemplate}">
 <ul>
   <li th:each="taco : *{tacos}">
     <span th:text="${taco.name}">taco name</span>

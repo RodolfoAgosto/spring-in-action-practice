@@ -5,6 +5,7 @@ import jakarta.validation.constraints.*;
 import lombok.Data;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.io.Serializable;
@@ -13,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-@Table("Taco_Order")
+@Table
 public class TacoOrder implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -39,11 +40,15 @@ public class TacoOrder implements Serializable {
     @NotNull(message = " * No puede estar vacio.")
     @Digits(integer=3, fraction=0, message=" * CVV Inválido")
     private String ccCVV;
+
+    @MappedCollection(idColumn = "taco_order")  // taco.taco_order → FK → taco_order.id
     @NotNull(message = " * No puede estar vacio.")
     @Size(min = 1, message = " * Ingrese al menos un taco.")
     private List<Taco> tacos = new ArrayList<Taco>();
 
     public void addTaco(Taco taco){
+        int taco_key = tacos.size();
+        taco.setTacoOrderKey(taco_key);
         this.tacos.add(taco);
     }
 

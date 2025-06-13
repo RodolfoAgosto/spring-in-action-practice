@@ -1,6 +1,7 @@
 package com.agosto.chapter03.spring_data_jdbc.controller;
 
 import com.agosto.chapter03.spring_data_jdbc.entity.Ingredient;
+import com.agosto.chapter03.spring_data_jdbc.entity.IngredientRef;
 import com.agosto.chapter03.spring_data_jdbc.entity.Taco;
 import com.agosto.chapter03.spring_data_jdbc.entity.TacoOrder;
 import com.agosto.chapter03.spring_data_jdbc.repository.IngredientRepository;
@@ -19,7 +20,7 @@ import java.util.stream.Collectors;
 
 @Controller("TacoControllerSpringDataJdbc")
 @RequestMapping("/springDataJdbcTacoController/newTaco")
-@SessionAttributes("tacoOrder")
+@SessionAttributes("tacoOrderSpringDataJdbc")
 @Slf4j
 public class TacoController {
 
@@ -44,12 +45,12 @@ public class TacoController {
                 .collect(Collectors.toList());
     }
 
-    @ModelAttribute("tacoOrder")
+    @ModelAttribute("tacoOrderSpringDataJdbc")
     public TacoOrder tacoOrder(){
         return new TacoOrder();
     }
 
-    @ModelAttribute("taco")
+    @ModelAttribute("tacoSpringDataJdbc")
     public Taco taco(){
         return new Taco();
     }
@@ -61,9 +62,13 @@ public class TacoController {
     }
 
     @PostMapping
-    public String addTaco(@Valid Taco taco, Errors errors, @ModelAttribute TacoOrder tacoOrder ){
+    public String addTaco(@Valid @ModelAttribute("tacoSpringDataJdbc") Taco taco, Errors errors, @ModelAttribute("tacoOrderSpringDataJdbc") TacoOrder tacoOrder ){
         if(errors.hasErrors())
             return "new-taco-springdatajdbc";
+        int tacoKey = 0;
+        for (IngredientRef ingredientRef: taco.getIngredients()) {
+            ingredientRef.setTacoKey(tacoKey++);
+        }
         tacoOrder.addTaco(taco);
         log.info("Procesando taco " + taco);
         return "redirect:/springDataJdbcTacoController/tacoOrders/current";

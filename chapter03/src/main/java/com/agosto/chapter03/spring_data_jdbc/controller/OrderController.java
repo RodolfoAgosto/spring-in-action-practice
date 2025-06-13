@@ -1,38 +1,38 @@
 package com.agosto.chapter03.spring_data_jdbc.controller;
 
-import com.agosto.chapter03.jdbc_template.entity.TacoOrder;
-import com.agosto.chapter03.jdbc_template.repository.JdbcTacoOrderRepository;
+import com.agosto.chapter03.spring_data_jdbc.entity.TacoOrder;
+import com.agosto.chapter03.spring_data_jdbc.repository.TacoOrderRepository;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
+
+import java.util.Date;
 
 @Controller("OrderControllerSpringDataJdbc")
 @RequestMapping("/springDataJdbcTacoController/tacoOrders")
-@SessionAttributes("springDataTacoOrder")
+@SessionAttributes("tacoOrderSpringDataJdbc")
 public class OrderController {
 
-    private final JdbcTacoOrderRepository jdbcTacoOrderRepository;
+    private TacoOrderRepository orderRepo;
 
-    public OrderController(JdbcTacoOrderRepository jdbcTacoOrderRepository){
-        this.jdbcTacoOrderRepository = jdbcTacoOrderRepository;
+    public OrderController(TacoOrderRepository orderRepo) {
+        this.orderRepo = orderRepo;
     }
 
     @GetMapping("/current")
     public String showTacoOrder(){
-        return "taco-order-jdbctemplate";
+        return "taco-order-springdatajdbc";
     }
 
     @PostMapping
-    public String saveTacoOrder(@Valid TacoOrder tacoOrder, Errors errors, SessionStatus sessionStatus){
+    public String saveTacoOrder(@Valid @ModelAttribute("tacoOrderSpringDataJdbc") TacoOrder tacoOrder, Errors errors, SessionStatus sessionStatus){
         if (errors.hasErrors())
-            return "tacoOrder";
-        jdbcTacoOrderRepository.save(tacoOrder);
+            return "taco-order-springdatajdbc";
+        tacoOrder.setPlacedAt(new Date());
+        orderRepo.save(tacoOrder);
         sessionStatus.setComplete();
         return "redirect:/";
     }

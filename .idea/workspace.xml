@@ -4,32 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9dcefcf-b06f-4071-9802-c9b5d756d96f" name="Changes" comment="Se valido el jdbctemplate.">
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/TacoCloudApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/controller/IdToIngredientConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/controller/TacoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/entity/Ingredient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/entity/IngredientRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/entity/Taco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/entity/TacoOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/repository/IngredientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/repository/TacoOrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/resources/templates/new-taco-springdatajdbc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter03/src/main/resources/templates/taco-order-springdatajdbc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d9dcefcf-b06f-4071-9802-c9b5d756d96f" name="Changes" comment="Se actualizaron los nombres de los atributos de sesión y del modelo del paquete correspondiente a jdbctemplate (Chapter 3) para evitar conflicto de nombres entre distintos modulos con entidades del mismo nombre.">
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jpa/controller/IdToIngredientConverterJpa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jpa/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jpa/controller/TacoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jpa/entity/Ingredient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jpa/entity/Taco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jpa/entity/TacoOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jpa/repository/IngredientRepositoryJpa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jpa/repository/TacoOrderRepositoryJpa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/resources/templates/new-taco-springdatajpa.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter03/src/main/resources/templates/taco-order-springdatajpa.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter03/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/TacoCloudApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/controller/TacoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/controller/TacoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/entity/Taco.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/entity/Taco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/repository/JdbcIngredientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/repository/JdbcIngredientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/repository/JdbcTacoOrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/jdbc_template/repository/JdbcTacoOrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/controller/TacoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/controller/TacoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/entity/IngredientRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/entity/IngredientRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/entity/Taco.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/entity/Taco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/entity/TacoOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/entity/TacoOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter03/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter03/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/resources/templates/new-taco-springdatajdbc.html" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/resources/templates/new-taco-springdatajdbc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter03/src/main/resources/templates/newTaco.html" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/resources/templates/new-taco-jdbctemplate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/resources/templates/taco-order-springdatajdbc.html" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/resources/templates/taco-order-springdatajdbc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter03/src/main/resources/templates/tacoOrder.html" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/resources/templates/taco-order-jdbctemplate.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -83,7 +83,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -240,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1749257785117</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Se actualizaron los nombres de los atributos de sesión y del modelo del paquete correspondiente a jdbctemplate (Chapter 3) para evitar conflicto de nombres entre distintos modulos con entidades del mismo nombre.">
+      <created>1749583638517</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1749583638518</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,6 +269,7 @@
     <MESSAGE value="Se modificó la carga de datos del map del Convertidor de ingredientes para que solo se cargue en el constructor.&#10;Se arreglaron detalles mínimos." />
     <MESSAGE value="Se finalizó el capítulo 3." />
     <MESSAGE value="Se valido el jdbctemplate." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se valido el jdbctemplate." />
+    <MESSAGE value="Se actualizaron los nombres de los atributos de sesión y del modelo del paquete correspondiente a jdbctemplate (Chapter 3) para evitar conflicto de nombres entre distintos modulos con entidades del mismo nombre." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se actualizaron los nombres de los atributos de sesión y del modelo del paquete correspondiente a jdbctemplate (Chapter 3) para evitar conflicto de nombres entre distintos modulos con entidades del mismo nombre." />
   </component>
 </project>

@@ -5,6 +5,12 @@ import lombok.Data;
 @Data
 public class IngredientRef {
 
-    private final String ingredient;
+    public IngredientRef(String ingredientId){
+        this.ingredient = ingredientId;
+    }
 
+    private String ingredient; // debe coincidir con el PK de Ingredient
+
+    private int tacoKey; // para numerar el orden
 }
+

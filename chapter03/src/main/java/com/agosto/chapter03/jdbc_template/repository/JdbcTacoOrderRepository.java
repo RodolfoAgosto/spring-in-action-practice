@@ -7,6 +7,7 @@ import com.agosto.chapter03.jdbc_template.entity.TacoOrder;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.PreparedStatementCreatorFactory;
+import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
@@ -23,27 +24,29 @@ import java.util.Optional;
 @Repository
 public class JdbcTacoOrderRepository implements TacoOrderRepository {
 
-    JdbcTemplate jdbcTemplate;
+    private JdbcOperations jdbcOperations;
 
-    JdbcTacoOrderRepository(JdbcTemplate jdbcTemplate){
-        this.jdbcTemplate = jdbcTemplate;
+    public JdbcTacoOrderRepository(JdbcTemplate jdbcOperations){
+        this.jdbcOperations = jdbcOperations;
     }
 
     @Override
     @Transactional
     public TacoOrder save(TacoOrder tacoOrder) {
         PreparedStatementCreatorFactory pscf = new PreparedStatementCreatorFactory(
-                "insert into Taco_Order (" +
-                        "delivery_Name, delivery_Street, delivery_City, " +
-                        "delivery_State, delivery_Zip, cc_Number, " +
-                        "cc_Expiration, cc_CVV, placed_at)" +
+                "insert into TACO_ORDER (" +
+                        "DELIVERY_NAME, DELIVERY_STREET, DELIVERY_CITY, " +
+                        "DELIVERY_STATE, DELIVERY_ZIP, CC_NUMBER, " +
+                        "CC_EXPIRATION, CC_CVV, PLACED_AT)" +
                         " values(?,?,?,?,?,?,?,?,?)",
                         Types.VARCHAR, Types.VARCHAR, Types.VARCHAR,
                         Types.VARCHAR, Types.VARCHAR, Types.VARCHAR,
                         Types.VARCHAR, Types.VARCHAR, Types.TIMESTAMP);
         pscf.setReturnGeneratedKeys(true);
+
         tacoOrder.setPlacedAt(new Date());
-        PreparedStatementCreator psc = pscf.newPreparedStatementCreator(Arrays.asList(
+        PreparedStatementCreator psc = pscf.newPreparedStatementCreator(
+                Arrays.asList(
                                        tacoOrder.getDeliveryName(),
                                        tacoOrder.getDeliveryStreet(),
                                        tacoOrder.getDeliveryCity(),
@@ -53,9 +56,11 @@ public class JdbcTacoOrderRepository implements TacoOrderRepository {
                                        tacoOrder.getCcExpiration(),
                                        tacoOrder.getCcCVV(),
                                        tacoOrder.getPlacedAt()));
+
         GeneratedKeyHolder keyHolder = new GeneratedKeyHolder();
-        jdbcTemplate.update(psc, keyHolder);
+        jdbcOperations.update(psc, keyHolder);
         tacoOrder.setId(keyHolder.getKey().longValue());
+
         List<Taco> tacos =  tacoOrder.getTacos();
         int keyTaco = 0;
         for (Taco taco : tacos) {
@@ -65,56 +70,84 @@ public class JdbcTacoOrderRepository implements TacoOrderRepository {
 
     }
 
-    public void saveTaco(Long idOrder, int taco_order_key, Taco taco){
+    public long saveTaco(Long idOrder, int taco_order_key, Taco taco){
 
         taco.setCreatedAt(new Date());
         PreparedStatementCreatorFactory pscf = new PreparedStatementCreatorFactory(
-                "insert into Taco(name, taco_order, taco_order_key, created_at) values ( ?, ?, ?, ?)",
+                "insert into TACO(NAME, TACO_ORDER, TACO_ORDER_KEY, CREATED_AT) values ( ?, ?, ?, ?)",
         Types.VARCHAR, Types.BIGINT, Types.BIGINT, Types.TIMESTAMP);
         pscf.setReturnGeneratedKeys(true);
-        PreparedStatementCreator psc = pscf.newPreparedStatementCreator(Arrays.asList(
-           taco.getName(),idOrder, taco_order_key, taco.getCreatedAt()
+
+        PreparedStatementCreator psc = pscf.newPreparedStatementCreator(
+                Arrays.asList(
+                       taco.getName(),idOrder, taco_order_key, taco.getCreatedAt()
         ));
         GeneratedKeyHolder generatedKeyHolder = new GeneratedKeyHolder();
-        jdbcTemplate.update(psc, generatedKeyHolder);
+        jdbcOperations.update(psc, generatedKeyHolder);
         taco.setId(generatedKeyHolder.getKey().longValue());
+
         saveIngredientRef(taco.getId(), taco.getIngredients());
+
+        return taco.getId();
     }
 
-    public void saveIngredientRef(Long tacoID, List<IngredientRef> ingredients){
+    public void saveIngredientRef(long tacoId, List<IngredientRef> ingredientRefs){
 
         int taco_key = 0;
-        for(IngredientRef ingredientRef : ingredients) {
-            PreparedStatementCreatorFactory pscf = new PreparedStatementCreatorFactory(
-                    "insert into Ingredient_Ref (ingredient, taco, taco_key) values ???",
-                    Types.VARCHAR, Types.BIGINT, Types.BIGINT
-            );
-            pscf.setReturnGeneratedKeys(true);
-            PreparedStatementCreator psc = pscf.newPreparedStatementCreator(Arrays.asList(
-                    ingredientRef.getIngredient(), tacoID, taco_key++
-            ));
-        }
+        for(IngredientRef ingredientRef : ingredientRefs) {
+                jdbcOperations.update(
+                        "insert into Ingredient_Ref (ingredient, taco, taco_key) "
+                                + "values (?, ?, ?)",
+                        ingredientRef.getIngredient(), tacoId, taco_key++);
+            }
     }
 
     @Override
     public Optional<TacoOrder> findById(Long id) {
-        List<TacoOrder> tacoOrders = jdbcTemplate.query("select * from TacoOrder", this::mapRowToTacoOrder);
-        return tacoOrders.size() == 0 ? Optional.empty() : Optional.of(tacoOrders.get(0));
+        TacoOrder tacoOrder = jdbcOperations.queryForObject("select ID, DELIVERY_NAME, DELIVERY_STREET, DELIVERY_CITY, "
+                + "DELIVERY_STATE, DELIVERY_ZIP, CC_NUMBER, CC_EXPIRATION, CC_CVV, PLACED_AT from TACO_ORDER where id=?", this::mapRowToTacoOrder, id);
+        return Optional.of(tacoOrder);
     }
 
     private TacoOrder mapRowToTacoOrder(ResultSet row, int rowNumber) throws SQLException {
         TacoOrder tacoOrder =  new TacoOrder();
         tacoOrder.setId(row.getLong("id"));
-        tacoOrder.setDeliveryName(row.getString("delivery_Name"));
-        tacoOrder.setDeliveryStreet(row.getString("delivery_Street"));
-        tacoOrder.setDeliveryCity(row.getString("delivery_City"));
-        tacoOrder.setDeliveryState(row.getString("delivery_State"));
-        tacoOrder.setDeliveryZip(row.getString("delivery_Zip"));
-        tacoOrder.setCcNumber(row.getString("cc_number"));
-        tacoOrder.setCcExpiration(row.getString("cc_expiration"));
-        tacoOrder.setCcCVV(row.getString("cc_cvv"));
-        tacoOrder.setPlacedAt(new Date(row.getTimestamp("placed_at").getTime()));
+        tacoOrder.setDeliveryName(row.getString("DELIVERY_NAME"));
+        tacoOrder.setDeliveryStreet(row.getString("DELIVERY_STREET"));
+        tacoOrder.setDeliveryCity(row.getString("DELIVERY_CITY"));
+        tacoOrder.setDeliveryState(row.getString("DELIVERY_STATE"));
+        tacoOrder.setDeliveryZip(row.getString("DELIVERY_ZIP"));
+        tacoOrder.setCcNumber(row.getString("CC_NUMBER"));
+        tacoOrder.setCcExpiration(row.getString("CC_EXPIRATION"));
+        tacoOrder.setCcCVV(row.getString("CC_CVV"));
+        tacoOrder.setPlacedAt(new Date(row.getTimestamp("PLACED_AT").getTime()));
         return tacoOrder;
     }
+
+    private List<Taco> findTacosByOrderId(long orderId) {
+        return jdbcOperations.query(
+                "select id, name, created_at from Taco "
+                        + "where taco_order=? order by taco_order_key",
+                (row, rowNum) -> {
+                    Taco taco = new Taco();
+                    taco.setId(row.getLong("id"));
+                    taco.setName(row.getString("name"));
+                    taco.setCreatedAt(new Date(row.getTimestamp("created_at").getTime()));
+                    taco.setIngredients(findIngredientsByTacoId(row.getLong("id")));
+                    return taco;
+                },
+                orderId);
+    }
+
+    private List<IngredientRef> findIngredientsByTacoId(long tacoId) {
+        return jdbcOperations.query(
+                "select ingredient from Ingredient_Ref "
+                        + "where taco = ? order by taco_key",
+                (row, rowNum) -> {
+                    return new IngredientRef(row.getString("ingredient"));
+                },
+                tacoId);
+    }
+
 
 }
