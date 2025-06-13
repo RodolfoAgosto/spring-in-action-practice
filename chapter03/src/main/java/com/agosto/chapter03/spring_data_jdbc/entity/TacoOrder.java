@@ -41,7 +41,7 @@ public class TacoOrder implements Serializable {
     @Digits(integer=3, fraction=0, message=" * CVV Inválido")
     private String ccCVV;
 
-    @MappedCollection(idColumn = "taco_order")  // taco.taco_order → FK → taco_order.id
+    @MappedCollection(idColumn = "TACO_ORDER")  // taco.taco_order → FK → taco_order.id
     @NotNull(message = " * No puede estar vacio.")
     @Size(min = 1, message = " * Ingrese al menos un taco.")
     private List<Taco> tacos = new ArrayList<Taco>();

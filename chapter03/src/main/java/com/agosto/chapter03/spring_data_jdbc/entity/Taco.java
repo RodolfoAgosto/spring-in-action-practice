@@ -27,7 +27,7 @@ public class Taco {
 
     private Integer tacoOrderKey;
 
-    @MappedCollection(idColumn = "taco")  // FK a taco.id en ingredient_ref
+    @MappedCollection(idColumn = "TACO")  // FK a taco.id en ingredient_ref
     @Size(min=1, message = "* Ingrese al menos un ingrediente.")
     private List<IngredientRef> ingredients = new ArrayList<>();
 
