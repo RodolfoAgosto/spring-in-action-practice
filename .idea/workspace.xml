@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9dcefcf-b06f-4071-9802-c9b5d756d96f" name="Changes" comment="Jdbc OK.">
+    <list default="true" id="d9dcefcf-b06f-4071-9802-c9b5d756d96f" name="Changes" comment="Jdbc OK.&#10;Spring Data Jdbc OK.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/entity/Taco.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/entity/Taco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/entity/TacoOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jdbc/entity/TacoOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter03/target/classes/com/agosto/chapter03/spring_data_jdbc/entity/TacoOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/target/classes/com/agosto/chapter03/spring_data_jdbc/entity/TacoOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jpa/entity/Taco.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jpa/entity/Taco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jpa/entity/TacoOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/java/com/agosto/chapter03/spring_data_jpa/entity/TacoOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/src/main/resources/templates/taco-order-springdatajpa.html" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/src/main/resources/templates/taco-order-springdatajpa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/target/classes/com/agosto/chapter03/spring_data_jpa/entity/Taco.class" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/target/classes/com/agosto/chapter03/spring_data_jpa/entity/Taco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/target/classes/com/agosto/chapter03/spring_data_jpa/entity/TacoOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/target/classes/com/agosto/chapter03/spring_data_jpa/entity/TacoOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter03/target/classes/templates/taco-order-springdatajpa.html" beforeDir="false" afterPath="$PROJECT_DIR$/chapter03/target/classes/templates/taco-order-springdatajpa.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1749856249290</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Jdbc OK.&#10;Spring Data Jdbc OK.">
+      <created>1749857433674</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1749857433674</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -256,6 +266,12 @@
     <MESSAGE value="Se valido el jdbctemplate." />
     <MESSAGE value="Se actualizaron los nombres de los atributos de sesión y del modelo del paquete correspondiente a jdbctemplate (Chapter 3) para evitar conflicto de nombres entre distintos modulos con entidades del mismo nombre." />
     <MESSAGE value="Jdbc OK." />
-    <option name="LAST_COMMIT_MESSAGE" value="Jdbc OK." />
+    <MESSAGE value="Jdbc OK.&#10;Spring Data Jdbc OK." />
+    <option name="LAST_COMMIT_MESSAGE" value="Jdbc OK.&#10;Spring Data Jdbc OK." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/spring_in_action_practice$com_agosto_chapter03_TacoCloudApplication.ic" NAME="com.agosto.chapter03.TacoCloudApplication Coverage Results" MODIFIED="1749876222369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.agosto.chapter03.*</FILTER>
+    </SUITE>
   </component>
 </project>

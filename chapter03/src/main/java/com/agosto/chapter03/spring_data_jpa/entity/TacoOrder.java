@@ -18,11 +18,11 @@ public class TacoOrder implements Serializable {
 
     @Id
     @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "PLACED_AT")
-    private Date placedAt = new Date();;
+    private Date placedAt = new Date();
 
     @Column(name = "DELIVERY_NAME")
     @NotBlank(message = " * Ingrese un nombre.")
@@ -66,6 +66,8 @@ public class TacoOrder implements Serializable {
 
     public void addTaco(Taco taco) {
         taco.setTacoOrder(this);
+        int taco_key = tacos.size();
+        taco.setTacoOrderKey(taco_key);
         this.tacos.add(taco);
     }
 

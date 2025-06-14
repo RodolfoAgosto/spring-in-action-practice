@@ -1,10 +1,12 @@
 package com.agosto.chapter03.spring_data_jpa.entity;
 
+import com.agosto.chapter03.spring_data_jdbc.entity.IngredientRef;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 import lombok.Data;
+import org.springframework.data.relational.core.mapping.MappedCollection;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -32,6 +34,8 @@ public class Taco {
     @Size(min=1, message = "* Ingrese al menos un ingrediente.")
     private List<Ingredient> ingredients = new ArrayList<>();
 
+    private Integer tacoOrderKey;
+
     public void addIngredient(Ingredient ingredient) {
         this.ingredients.add(ingredient);
     }
@@ -40,4 +44,5 @@ public class Taco {
     public String toString() {
         return "Taco{id=" + id + ", name=" + name + "}";
     }
+
 }
